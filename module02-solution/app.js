@@ -39,9 +39,14 @@ function ShoppingListCheckOffService() {
 	var item01 = { name : 'cookies', quantity: 7 };
 	var item02 = { name : 'ice creams', quantity: 4 };
 	var item03 = { name : 'lollipops', quantity: 10 };
+	var item04 = { name : 'chocolate bars', quantity: 3 };
+	var item05 = { name : 'colas', quantity: 12 };
+
 	toBuyItems.push(item01);
 	toBuyItems.push(item02);
 	toBuyItems.push(item03);
+	toBuyItems.push(item04);
+	toBuyItems.push(item05);
 
 	service.checkItem = function (indexChecked) {
 		var item = toBuyItems[indexChecked];
