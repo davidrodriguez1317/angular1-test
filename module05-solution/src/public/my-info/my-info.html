@@ -1,0 +1,23 @@
+ <fieldset>
+  <h2>My info</h2>
+  <div class="row" style="margin-left: 10px;">
+    <div class="col-sm-5" ng-hide="myInfoCtrl.user == undefined || myInfoCtrl.user.firstname ==''">
+      First name: {{ myInfoCtrl.user.firstname }}
+      <br>
+      Last name: {{ myInfoCtrl.user.lastname }}
+      <br>
+      Email: {{ myInfoCtrl.user.email }}
+      <br>
+      Phone: {{ myInfoCtrl.user.phone }}
+      <br>
+      Favorite meal: {{ myInfoCtrl.user.favDishName }}
+      <br>
+      <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.user.favDish}}.jpg" alt="{{myInfoCtrl.user.favDishName}}" />
+    </div>
+
+    <div class="col-sm-5" ng-show="myInfoCtrl.user == undefined || myInfoCtrl.user.firstname ==''">
+      <h3>Not Signed Up Yet. <a ui-sref="public.signup"> Sign up Now!</a></h3>
+    </div>
+  </div>    
+      
+</fieldset>

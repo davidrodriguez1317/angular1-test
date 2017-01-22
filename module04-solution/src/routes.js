@@ -46,17 +46,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       items : [ '$stateParams', 'MenuDataService',
         function ($stateParams, MenuDataService) {
           var promise = MenuDataService.getItemsForCategory($stateParams.categoryShortName);
-          console.log('getItemsForCategory 02', promise);
-
           return promise.then(function(result) {
-                      var itemsResult = result.data.menu_items;
-                      console.log('getItemsForCategory 03', itemsResult);
-                      var itemList = {
-                        items: itemsResult
-                      };
-                      console.log('getItemsForCategory 04', itemList);
-
-
             return result.data.menu_items;
           }, function(reason) {
             console.log('Error connecting');
